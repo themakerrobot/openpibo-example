@@ -20,9 +20,10 @@ from device.devicelib import cDevice
 
 import time
 from threading import Thread, Lock
+from queue import Queue
 
 obj = cDevice()
-next_cmd = [False, ""]
+que = Queue()
 
 def decode_pkt(pkt):
   print("Recv:", pkt)
@@ -32,8 +33,8 @@ def update():
   battery_check_time = time.time()
 
   while True:
-    if next_cmd[0] == True:
-      data = obj.send_raw(next_cmd[1])
+    if que.qsize() > 0:
+      data = obj.send_raw(que.get())
       decode_pkt(data)
 
     if time.time() - system_check_time > 1:  # 시스템 메시지 1초 간격 전송
@@ -46,7 +47,7 @@ def update():
       decode_pkt(data)
       battery_check_time = time.time()
 
-    time.sleep(0.1)
+    time.sleep(0.01)
 
 if __name__ == "__main__":
   obj.send_cmd(obj.code['PIR'], "on")
@@ -60,13 +61,4 @@ if __name__ == "__main__":
     if pkt == 'q':
       break
 
-    # 메시지를 처리하고 있다면, 다음 메시지 목록에 등록
-    if obj.locked() == True:
-      next_cmd = [True, pkt]
-      continue
-
-    next_cmd = [False, ""]
-    data = obj.send_raw(pkt)
-
-    print(data)
-
+    que.put(pkt)
