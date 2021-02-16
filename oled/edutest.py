@@ -102,7 +102,7 @@ def camera_test():
     # 캡처
     pibo.start_camera()
     time.sleep(3)
-    pibo.train_myObject()
+    pibo.capture()
 
     time.sleep(3)
 
