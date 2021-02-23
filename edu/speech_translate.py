@@ -9,7 +9,7 @@ from pibo import Edu_Pibo
 def translate_test():
     pibo = Edu_Pibo()
 
-    print('한->영: 번역할 문장을 입력하세요. (q: 나가기)')
+    print('한->영: 번역할 문장을 입력하세요. (q: 종료)')
     while True:
         string = input('입력: ')
         if string == "q":

@@ -6,18 +6,16 @@ from utils.config import Config as cfg
 sys.path.append(cfg.OPENPIBO_PATH + '/edu')
 from pibo import Edu_Pibo
 
-def capture_test():
+def color_test():
+    # 카메라 가까이
     pibo = Edu_Pibo()
-
-    # Version 1. Camera on
     pibo.start_camera()
-    time.sleep(5)
-    pibo.capture()
-    pibo.stop_camera()
     time.sleep(3)
-
-    # Version 2. Camera off
-    pibo.capture("capture_cameraoff.png")
+    color = pibo.search_color()
+    print("Search Color: ", color[1])
+    pibo.stop_camera()
     
 if __name__ == "__main__":
-    capture_test()
+    color_test()
+
+    

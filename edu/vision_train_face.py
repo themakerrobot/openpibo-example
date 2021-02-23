@@ -9,7 +9,7 @@ from pibo import Edu_Pibo
 def train_face_test():
     pibo = Edu_Pibo()
 
-    print("Start DB:", pibo.get_facedb()[1])
+    print("Start DB:", pibo.get_facedb()[1][0])
 
     # Train face
     pibo.start_camera()
@@ -22,7 +22,7 @@ def train_face_test():
     pibo.start_camera()
     time.sleep(2)
     ret = pibo.search_face()
-    print("Recognize: ", ret)
+    print("Recognize: ", ret[1])
     pibo.stop_camera()
 
     # Save DB
@@ -30,15 +30,15 @@ def train_face_test():
     
     # Reset DB
     pibo.init_facedb()
-    print('After reset db, DB:: ', pibo.get_facedb()[1])
+    print('After reset db, DB:: ', pibo.get_facedb()[1][0])
 
     # Load DB
     pibo.load_facedb("facedb")
-    print('After Load db, DB:: ', pibo.get_facedb()[1])
+    print('After Load db, DB:: ', pibo.get_facedb()[1][0])
 
     # Delete Face
     pibo.delete_face("Kim")
-    print('After Delete face: ', pibo.get_facedb()[1])
+    print('After Delete face: ', pibo.get_facedb()[1][0])
     
     
 if __name__ == "__main__":

@@ -9,10 +9,10 @@ from pibo import Edu_Pibo
 def talk_test():
     pibo = Edu_Pibo()
 
-    print('대화를 시작합니다. 그만하려면 그만을 입력하세요')
+    print('대화를 시작합니다. 그만하려면 q를 입력하세요')
     while True:
         question = input('나: ')
-        if question == '그만':
+        if question == 'q':
             break
 
         ans = pibo.conversation(question)
