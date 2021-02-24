@@ -10,12 +10,12 @@ from pibo import Edu_Pibo
 def motor_test():
     pibo = Edu_Pibo()
     while True:
-        pibo.motor(2, 50, 20, 10)
-        pibo.motor(8, -50, accel=40)
+        pibo.motor(2, 30, 100, 10)
+        pibo.motor(8, 30, accel=10)
         time.sleep(1)
 
-        pibo.motor(2, -50, speed=200)
-        pibo.motor(8, 50)
+        pibo.motor(2, -30, 100, 10)
+        pibo.motor(8, -30, speed=10)
         time.sleep(1)
 
 if __name__ == "__main__":
