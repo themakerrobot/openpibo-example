@@ -15,7 +15,7 @@ def play_tts(play_words):
     filename = cfg.TESTDATA_PATH+"/tts.mp3"
     return_text = "<speak><voice name='WOMAN_READ_CALM'> {} <break time='500ms'/></voice></speak>".format(play_words)
     pibo.tts(return_text, filename, "ko")
-    pibo.play_audio(filename, out='local', volume=-1500)
+    pibo.play_audio(filename, out='local', volume=-1500, background=False)
 
 def bot_weather():
     print('bot_weather')
