@@ -13,8 +13,8 @@ def capture_test():
     pibo.start_camera()
     time.sleep(5)
     pibo.capture()
-    pibo.stop_camera()
     time.sleep(3)
+    pibo.stop_camera()
 
     # Version 2. Camera off
     pibo.capture("capture_cameraoff.png")

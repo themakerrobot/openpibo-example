@@ -9,7 +9,7 @@ from pibo import Edu_Pibo
 def talk_test():
     pibo = Edu_Pibo()
 
-    print('대화를 시작합니다. 그만하려면 q를 입력하세요')
+    print('대화를 시작합니다. (q: 종료)')
     while True:
         question = input('나: ')
         if question == 'q':
