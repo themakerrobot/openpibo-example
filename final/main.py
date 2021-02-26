@@ -86,14 +86,14 @@ def decode(msg):
     bot_db ={
         '날씨' : bot_weather,
         '사진' : bot_picture,
-        '걸어' : bot_walk,
+        '이동' : bot_walk,
     }
 
     for item in bot_db:
         if item in msg:
             matched = True
             
-            if item == '걸어':
+            if item == '이동':
                 bot_db[item](msg)
             else:
                 bot_db[item]()
