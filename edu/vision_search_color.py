@@ -7,7 +7,6 @@ sys.path.append(cfg.OPENPIBO_PATH + '/edu')
 from pibo import Edu_Pibo
 
 def color_test():
-    # 카메라 가까이
     pibo = Edu_Pibo()
     pibo.start_camera()
     time.sleep(3)

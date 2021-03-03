@@ -15,7 +15,7 @@ def motor_test():
         time.sleep(1)
 
         pibo.motor(2, -30, 100, 10)
-        pibo.motor(8, -30, speed=10)
+        pibo.motor(8, -30, speed=70)
         time.sleep(1)
 
 if __name__ == "__main__":
