@@ -8,10 +8,12 @@ from pibo import Edu_Pibo
 
 def rgb_test():
     pibo = Edu_Pibo()
-    pibo.eye_on(0,255,0)
+    ret = pibo.eye_on(0,255,0)
+    print(ret)
     time.sleep(1.5)
 
-    pibo.eye_on(0,0,255,255,0,0)
+    ret2 = pibo.eye_on(0,0,255,255,0,0)
+    print(ret2)
     time.sleep(1.5)
 
     pibo.eye_off()

@@ -9,7 +9,8 @@ from pibo import Edu_Pibo
 def image_test():
     pibo = Edu_Pibo()
 
-    pibo.draw_image(cfg.TESTDATA_PATH +"/clear.png")
+    ret=pibo.draw_image(cfg.TESTDATA_PATH +"/clear.png")
+    print(ret)
     pibo.show_display()
     time.sleep(2)
     pibo.clear_display()

@@ -8,7 +8,8 @@ from pibo import Edu_Pibo
 
 def color_name_test():
     pibo = Edu_Pibo()
-    pibo.eye_on('aqua')
+    ret=pibo.eye_on('aqua', 'purple')
+    print(ret)
     time.sleep(1)
     
     pibo.eye_on('pink')

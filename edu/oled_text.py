@@ -9,7 +9,8 @@ from pibo import Edu_Pibo
 def text_test():
     pibo = Edu_Pibo()
 
-    pibo.draw_text((10, 10), '안녕하세요. Hello', 15)
+    ret=pibo.draw_text((10,10), '안녕하세요. Hello', 15)
+    print(ret)
     pibo.show_display()
     time.sleep(2)
     pibo.clear_display()
