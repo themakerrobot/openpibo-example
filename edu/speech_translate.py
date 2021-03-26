@@ -15,7 +15,7 @@ def translate_test():
         if string == "q":
             break
         ret = pibo.translate(string, to="en")
-        print("번역:", ret[1])
+        print("번역:", ret["data"])
 
 if __name__ == "__main__":
     translate_test()

@@ -10,7 +10,7 @@ def msg_device(msg):
     print(msg)
 
 def device_test():
-    ret=pibo.start_devices(msg_device)
+    pibo.start_devices(msg_device)
 
 
 if __name__ == "__main__":

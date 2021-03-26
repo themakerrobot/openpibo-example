@@ -14,9 +14,9 @@ def detect_test():
     obj = pibo.search_object()
     qr = pibo.search_qr()
     text = pibo.search_text()
-    print("Search Object: ", obj[1])
-    print("Search QR: ", qr[1])
-    print("Search Text: ", text[1])
+    print("Search Object: ", obj["data"])
+    print("Search QR: ", qr["data"])
+    print("Search Text: ", text["data"])
     pibo.stop_camera()
     
 if __name__ == "__main__":

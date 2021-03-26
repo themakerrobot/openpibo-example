@@ -11,7 +11,7 @@ def color_test():
     pibo.start_camera()
     time.sleep(3)
     color = pibo.search_color()
-    print("Search Color: ", color[1])
+    print("Search Color: ", color["data"])
     pibo.stop_camera()
     
 if __name__ == "__main__":

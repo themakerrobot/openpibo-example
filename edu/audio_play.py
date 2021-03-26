@@ -8,7 +8,8 @@ from pibo import Edu_Pibo
 
 def audio_test():
     pibo = Edu_Pibo()
-    pibo.play_audio(filename=cfg.TESTDATA_PATH+"/test.mp3", out='local', volume=-2000)
+    ret=pibo.play_audio(filename=cfg.TESTDATA_PATH+"/test.mp3", out='local', volume=-2000)
+    print(ret)
     time.sleep(3)
     pibo.stop_audio()
 

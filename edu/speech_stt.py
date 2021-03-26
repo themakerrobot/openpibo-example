@@ -10,7 +10,7 @@ def stt_test():
     pibo = Edu_Pibo()
 
     ret = pibo.stt()
-    print(ret[1])
+    print(ret)
 
 if __name__ == "__main__":
     stt_test()

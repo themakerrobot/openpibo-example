@@ -16,7 +16,7 @@ def talk_test():
             break
 
         ans = pibo.conversation(question)
-        print('파이보: ', ans[1])
+        print('파이보: ', ans["data"])
 
 if __name__ == "__main__":
     talk_test()

@@ -9,8 +9,8 @@ from pibo import Edu_Pibo
 
 def motion_test():
     pibo = Edu_Pibo()
-    pibo.set_motion("dance1", 2)
-
+    ret=pibo.set_motion("dance1", 2)
+    print(ret)
 
 if __name__ == "__main__":
     motion_test()

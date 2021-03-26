@@ -10,9 +10,9 @@ def face_test():
     pibo = Edu_Pibo()
 
     pibo.start_camera()
-    time.sleep(5)
+    time.sleep(3)
     face = pibo.search_face()
-    print(face[1])
+    print(face["data"])
     pibo.stop_camera()
     
 if __name__ == "__main__":

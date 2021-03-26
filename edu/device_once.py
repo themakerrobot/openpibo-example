@@ -15,7 +15,7 @@ def device_once_test():
         if cmd == "q":
             break
         ret = pibo.check_device(cmd)
-        print(ret[1]) 
+        print(ret) 
 
 if __name__ == "__main__":
     device_once_test()
