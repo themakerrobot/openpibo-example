@@ -11,7 +11,7 @@ def capture_test():
 
     # Version 1. Camera on
     pibo.start_camera()
-    time.sleep(5)
+    time.sleep(1)
     pibo.capture()
     time.sleep(3)
     pibo.stop_camera()

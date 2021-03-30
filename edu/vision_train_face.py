@@ -28,12 +28,12 @@ def train_face_test():
     pibo.save_facedb('./facedb')
     
     # Reset DB
-    pibo.init_facedb()
-    print('After reset db, DB:: ', pibo.get_facedb()["data"][0])
+    # pibo.init_facedb()
+    # print('After reset db, DB: ', pibo.get_facedb()["data"][0])
 
     # Load DB
-    pibo.load_facedb("facedb")
-    print('After Load db, DB:: ', pibo.get_facedb()["data"][0])
+    pibo.load_facedb()
+    print('After Load db, DB: ', pibo.get_facedb()["data"][0])
 
     # Delete Face
     ret=pibo.delete_face("Kim")

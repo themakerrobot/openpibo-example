@@ -12,7 +12,8 @@ def color_name_test():
     print(ret)
     time.sleep(1)
     
-    pibo.eye_on('pink')
+    ret2=pibo.eye_on('pink')
+    print(ret2)
     time.sleep(1)
     pibo.eye_off()
 

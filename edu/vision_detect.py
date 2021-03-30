@@ -10,13 +10,13 @@ def detect_test():
     pibo = Edu_Pibo()
 
     pibo.start_camera()
-    time.sleep(3)
+    time.sleep(2)
     obj = pibo.search_object()
     qr = pibo.search_qr()
     text = pibo.search_text()
-    print("Search Object: ", obj["data"])
-    print("Search QR: ", qr["data"])
-    print("Search Text: ", text["data"])
+    print("Search Object: ", obj)
+    print("Search QR: ", qr)
+    print("Search Text: ", text)
     pibo.stop_camera()
     
 if __name__ == "__main__":

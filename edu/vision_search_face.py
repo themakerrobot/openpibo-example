@@ -12,7 +12,7 @@ def face_test():
     pibo.start_camera()
     time.sleep(3)
     face = pibo.search_face()
-    print(face["data"])
+    print(face)
     pibo.stop_camera()
     
 if __name__ == "__main__":
