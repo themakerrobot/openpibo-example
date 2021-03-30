@@ -12,7 +12,7 @@ def rgb_test():
     print(ret)
     time.sleep(1.5)
 
-    ret2 = pibo.eye_on(0,0,0,255,255,0,0)
+    ret2 = pibo.eye_on(0,0,255,255,0,0)
     print(ret2)
     time.sleep(1.5)
 

@@ -8,9 +8,8 @@ from pibo import Edu_Pibo
 
 def figure_test():
     pibo = Edu_Pibo()
-    ret=pibo.draw_figure((10,10,30,30), "rectangle", True)
-    print(ret)
-    pibo.draw_figure((70,40,90,60), "동그라미", False)
+    pibo.draw_figure((10,10,30,30), "rectangle", True)
+    pibo.draw_figure((70,40,90,60), "circle", False)
     pibo.draw_figure((15,15,80,50), "line")
     pibo.show_display()
     time.sleep(1.5)

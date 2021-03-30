@@ -28,8 +28,7 @@ def add_color():
     print("Add lime: ", pibo.get_colordb()["data"])
     
     # Delete color
-    ret=pibo.delete_color('brown')
-    print(ret)
+    pibo.delete_color('brown')
     pibo.save_colordb('./new_colordb')
     pibo.load_colordb('new_colordb')
     print("Delete brown: ", pibo.get_colordb()["data"])
